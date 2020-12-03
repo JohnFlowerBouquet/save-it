@@ -1,0 +1,17 @@
+{
+  "name": "clipboard-storage",
+  "version": "1.0",
+  "description": "Extension for storing copied texts from clipboard",
+
+  "browser_action": {
+    "default_icon": "assets/icon.png",
+    "default_popup": "popup.html"
+  },
+  "permissions": ["activeTab", "storage", "<all_urls>"],
+  "manifest_version": 2,
+  "content_scripts":[{
+    "matches":["http://*/*","https://*/*"],
+    "js": ["contentScript.js"],
+    "run_at": "document_end" 
+  }]
+}

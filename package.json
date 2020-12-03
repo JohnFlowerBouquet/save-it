@@ -1,0 +1,27 @@
+{
+  "name": "save-it",
+  "version": "1.0.0",
+  "description": "Chrome extension for quick saving &amp; finding tagged notes",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JohnFlowerBouquet/save-it.git"
+  },
+  "keywords": [
+    "chrome",
+    "extension"
+  ],
+  "author": "JohnFlowerBouquet",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JohnFlowerBouquet/save-it/issues"
+  },
+  "homepage": "https://github.com/JohnFlowerBouquet/save-it#readme",
+  "dependencies": {
+    "eslint": "^7.13.0"
+  },
+  "devDependencies": {}
+}

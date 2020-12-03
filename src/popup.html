@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <style>
+    body {
+      margin: 0px;
+    }
+    .contaier {
+      display: flex;
+      flex-direction: column;
+    }
+    .container h3 {
+      text-align: center;
+    }
+
+    .clipboard_list {
+      height: 0;
+      transition: height 1s ease-in-out;
+      overflow-y: auto;
+      
+    }
+    .clipboard_list p {
+      border-bottom: 1px solid #D3D3D3;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      width: 160px;
+      cursor: pointer;
+    }
+
+    .clipboard_list p:hover {
+      background-color: #f3e4e4;
+    }
+
+    .clipboard_list p span {
+      background-color: #c1c1c1;
+    }
+
+    .clipboard_actions {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+
+    .clipboard_actions button {
+      background-color: transparent;
+      border: none;
+      text-decoration: underline;
+      font-size: 0.8em;
+    }
+
+    .clipboard_actions button:hover {
+      cursor: pointer;
+    }
+
+    .clipboard_actions button:focus {
+      outline: none;
+    }
+
+    .tooltip_container {
+      width: 50px;
+      background-color: black;
+      color: #fff;
+      text-align: center;
+      padding: 5px 0;
+      border-radius: 6px;
+      position: absolute;
+      z-index: 1;
+      transition: opacity 0.5s;
+      opacity: 1;
+    }
+
+    .tooltip_container::after {
+      content: " ";
+      position: absolute;
+      top: 100%; /* At the bottom of the tooltip */
+      left: 50%;
+      margin-left: -5px;
+      border-width: 5px;
+      border-style: solid;
+      border-color: black transparent transparent transparent;
+    }
+  </style>
+  <head>
+    <title>Save it</title>
+  </head>
+  <body>
+    <div class="container">
+      <h3>Clipboard Storage</h3>
+
+      <div class="clipboard_list" id="clipboard-list"></div>
+      <div class="clipboard_actions">
+          <button id="clean-action">Remove all</button>
+          <button id="merge-action">Copy all</button>
+      </div>      
+      <input type="text" id="search-input" placeholder="Search..." />
+
+    </div>
+    <script type="text/javascript" src="popup.js"></script>
+  </body>
+</html>
